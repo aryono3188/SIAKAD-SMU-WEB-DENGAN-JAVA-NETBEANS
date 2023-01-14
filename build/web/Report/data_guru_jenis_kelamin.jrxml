@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="1008" pageHeight="612" orientation="Landscape" columnWidth="968" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c9ab5da7-6e1d-4472-ba9b-293ac26d57c7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="1"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="jenis kelamin" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     guru.`nip_guru` AS guru_nip_guru,
+     guru.`nama_guru` AS guru_nama_guru,
+     guru.`jenis_kelamin_guru` AS guru_jenis_kelamin_guru,
+     guru.`usname_guru` AS guru_usname_guru,
+     guru.`pass_guru` AS guru_pass_guru,
+     guru.`wali_kelas` AS guru_wali_kelas,
+     guru.`alamat_guru` AS guru_alamat_guru,
+     guru.`no_telepon_guru` AS guru_no_telepon_guru
+FROM
+     `guru` guru
+WHERE
+     jenis_kelamin_guru = $P{jenis kelamin}]]>
+	</queryString>
+	<field name="guru_nip_guru" class="java.lang.String"/>
+	<field name="guru_nama_guru" class="java.lang.String"/>
+	<field name="guru_jenis_kelamin_guru" class="java.lang.String"/>
+	<field name="guru_usname_guru" class="java.lang.String"/>
+	<field name="guru_pass_guru" class="java.lang.String"/>
+	<field name="guru_wali_kelas" class="java.lang.String"/>
+	<field name="guru_alamat_guru" class="java.lang.String"/>
+	<field name="guru_no_telepon_guru" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="968" height="72" uuid="32ecb15d-7670-4147-a370-c39687702d57"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="369" y="6" width="189" height="20" uuid="7ce5be6e-4538-43f2-922e-0501fd67b1cf"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Sistem Informasi Akademik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="369" y="29" width="189" height="20" uuid="9161b513-9e06-4c0f-8158-959ae638abcc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Sekolah Menengah Umum]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="52" width="100" height="20" uuid="ed04778b-afcb-4cbc-ad4e-00a9df91ff17"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Berbasis Web]]></text>
+			</staticText>
+			<image>
+				<reportElement x="893" y="3" width="93" height="66" uuid="032c6826-ab12-4add-b00b-57b8ec0ffd7b"/>
+				<imageExpression><![CDATA["D:\\Latihan Java\\TA_Haryono_11151077\\web\\Report\\tut_wuri_handayani_1.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="-1" width="968" height="31" uuid="7ab667aa-eb45-4496-b034-a800e6599544"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="6" width="187" height="20" uuid="7e9c7f2f-4150-44fe-bd92-74ba51e3416a"/>
+				<box>
+					<pen lineColor="#CC0000"/>
+					<topPen lineColor="#CC0000"/>
+					<leftPen lineColor="#CC0000"/>
+					<bottomPen lineColor="#CC0000"/>
+					<rightPen lineColor="#CC0000"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Data Guru Berjenis Kelamin :]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="852" y="6" width="116" height="20" uuid="344b636c-1b6c-4a2b-a7a7-9bd6c383ad44"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="8" width="100" height="20" uuid="6238e605-5b9f-4c53-a0bd-bac6d5eeac93"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{jenis kelamin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="49" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="968" height="44" uuid="26fcab0b-5102-4759-8c22-5ee2cab93135"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="13" width="100" height="20" uuid="28f083c7-a762-4f9c-8d79-e8b7c6dfabc8"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[NIP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="117" y="13" width="142" height="20" uuid="e1c5f8a4-c18f-4a9c-a079-73268f2ae8b5"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Guru]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="12" width="73" height="20" uuid="49bffe73-ce45-4ab9-956c-32eafa65f59a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[User Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="12" width="69" height="21" uuid="a9e4b09c-4294-41bc-bb7b-37020ca5b0f3"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Password]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="13" width="116" height="20" uuid="9bfe26e1-9475-4517-9969-62af57fe9687"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Wali Kelas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="548" y="13" width="315" height="20" uuid="01a43b80-174d-4a9d-99fe-1eeb169e75a3"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="869" y="12" width="99" height="20" uuid="2e631bec-b855-4499-b79c-c8adb643a0bf"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Telepon]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="968" height="32" uuid="fa7386cb-0883-4569-b189-7886a3546a83"/>
+			</rectangle>
+			<textField>
+				<reportElement x="13" y="1" width="100" height="20" uuid="30d22b27-5fb5-41b2-ba23-74e2768b2da3"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{guru_nip_guru}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="1" width="142" height="20" uuid="cb49d66a-8255-4343-bafd-0b122d3fef1d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{guru_nama_guru}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="73" height="20" uuid="85756f9c-cd1e-428d-a820-929189b3962c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{guru_usname_guru}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="425" y="1" width="116" height="20" uuid="8a21db85-8cbb-427b-9757-c77e8e5ac8a5"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{guru_wali_kelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="1" width="69" height="20" uuid="4651e0e3-f902-4737-9db5-c6bb454c1310"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{guru_pass_guru}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="548" y="1" width="315" height="20" uuid="c731308e-ed09-46e1-8a63-0436c6ba36e1"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{guru_alamat_guru}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="869" y="1" width="99" height="20" uuid="4a43bac2-ddcd-4fcd-ae11-ec83203b15e2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{guru_no_telepon_guru}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="38" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="968" height="25" uuid="f9e32bec-d252-456c-a6e2-3e7cdb01b4d3"/>
+			</rectangle>
+			<textField>
+				<reportElement x="848" y="1" width="80" height="20" uuid="a89c5a0f-204e-444e-b737-5b25599117f5"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="928" y="1" width="40" height="20" uuid="a78b2afb-26c1-4e8b-8f23-c34ff623c4d1"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="7" splitType="Stretch"/>
+	</summary>
+</jasperReport>

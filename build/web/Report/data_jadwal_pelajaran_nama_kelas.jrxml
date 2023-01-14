@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c9ab5da7-6e1d-4472-ba9b-293ac26d57c7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="nama kelas" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     jadwal_pelajaran.`id_jadwal_pelajaran` AS jadwal_pelajaran_id_jadwal_pelajaran,
+     jadwal_pelajaran.`kode_kelas` AS jadwal_pelajaran_kode_kelas,
+     jadwal_pelajaran.`kode_pelajaran` AS jadwal_pelajaran_kode_pelajaran,
+     jadwal_pelajaran.`nip_guru` AS jadwal_pelajaran_nip_guru,
+     jadwal_pelajaran.`hari` AS jadwal_pelajaran_hari,
+     jadwal_pelajaran.`jam_pelajaran` AS jadwal_pelajaran_jam_pelajaran
+FROM
+     jadwal_pelajaran
+WHERE
+     kode_kelas = $P{nama kelas}]]>
+	</queryString>
+	<field name="jadwal_pelajaran_id_jadwal_pelajaran" class="java.lang.Integer"/>
+	<field name="jadwal_pelajaran_kode_kelas" class="java.lang.String"/>
+	<field name="jadwal_pelajaran_kode_pelajaran" class="java.lang.String"/>
+	<field name="jadwal_pelajaran_nip_guru" class="java.lang.String"/>
+	<field name="jadwal_pelajaran_hari" class="java.lang.String"/>
+	<field name="jadwal_pelajaran_jam_pelajaran" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="668" height="72" uuid="32ecb15d-7670-4147-a370-c39687702d57"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="252" y="6" width="189" height="20" uuid="7ce5be6e-4538-43f2-922e-0501fd67b1cf"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Sistem Informasi Akademik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="29" width="189" height="20" uuid="9161b513-9e06-4c0f-8158-959ae638abcc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Sekolah Menengah Umum]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="293" y="52" width="100" height="20" uuid="ed04778b-afcb-4cbc-ad4e-00a9df91ff17"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Berbasis Web]]></text>
+			</staticText>
+			<image>
+				<reportElement x="597" y="3" width="93" height="66" uuid="032c6826-ab12-4add-b00b-57b8ec0ffd7b"/>
+				<imageExpression><![CDATA["D:\\Latihan Java\\TA_Haryono_11151077\\web\\Report\\tut_wuri_handayani_1.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="32" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="-1" width="668" height="31" uuid="7ab667aa-eb45-4496-b034-a800e6599544"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="6" width="176" height="20" uuid="7e9c7f2f-4150-44fe-bd92-74ba51e3416a"/>
+				<box>
+					<pen lineColor="#CC0000"/>
+					<topPen lineColor="#CC0000"/>
+					<leftPen lineColor="#CC0000"/>
+					<bottomPen lineColor="#CC0000"/>
+					<rightPen lineColor="#CC0000"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Data Jadwal Belajar Kelas :]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="591" y="6" width="77" height="20" uuid="344b636c-1b6c-4a2b-a7a7-9bd6c383ad44"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="189" y="8" width="203" height="20" uuid="05b99245-7fcd-4bd3-a6f5-8fd40fa8b5c1"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nama kelas}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<rectangle>
+				<reportElement x="517" y="1" width="151" height="32" uuid="45ee92e6-8b98-4185-9e8c-826d849bdf9f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="411" y="1" width="106" height="32" uuid="1ea397c0-3b7d-44a8-a5e7-917d2b810c5e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="208" y="1" width="203" height="32" uuid="7c7913e1-eff8-448a-8b85-1a6a316a247b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="1" width="208" height="32" uuid="1bcfffca-cd39-4b73-8390-68232bf6b916"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="9" width="195" height="20" uuid="fb63690f-7c87-4978-8d21-b598ca97cad8"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Pelajaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="8" width="190" height="20" uuid="997a2ef7-1dba-4903-a9d1-f021544509a5"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Guru]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="424" y="8" width="93" height="20" uuid="00720ac0-abc5-480e-848e-a633b5d6ec2c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Hari]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="527" y="8" width="122" height="20" uuid="5ee58361-cb9f-4d14-971d-d016825f8a78"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Jam Pelajaran]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<rectangle>
+				<reportElement x="517" y="2" width="151" height="25" uuid="d1c342b0-a378-4c31-9cc8-66556021f054"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="411" y="2" width="106" height="25" uuid="25c61761-2cdb-4809-a688-5b004f2fb4da"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="208" y="2" width="203" height="25" uuid="ab7243b9-8e59-4e8b-828b-33ea7e85cdfc"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="2" width="208" height="25" uuid="492eb98c-cf3c-44bf-ad85-322a0cc01866"/>
+			</rectangle>
+			<textField>
+				<reportElement x="13" y="5" width="195" height="20" uuid="12d02c22-9c35-49f0-967b-cad3de33d1d8"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jadwal_pelajaran_kode_pelajaran}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="5" width="190" height="20" uuid="46fe3596-bf8b-420e-b8ac-eb237fad44cf"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jadwal_pelajaran_nip_guru}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="424" y="5" width="93" height="20" uuid="925d26b0-f616-4faf-a4f3-24b84c0c1b8d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jadwal_pelajaran_hari}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="527" y="4" width="141" height="20" uuid="92bbb726-c50b-4854-b564-e3bd77c6b2c2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jadwal_pelajaran_jam_pelajaran}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement x="547" y="6" width="80" height="20" uuid="a89c5a0f-204e-444e-b737-5b25599117f5"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="628" y="6" width="40" height="20" uuid="a78b2afb-26c1-4e8b-8f23-c34ff623c4d1"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="7" splitType="Stretch"/>
+	</summary>
+</jasperReport>

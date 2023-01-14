@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c9ab5da7-6e1d-4472-ba9b-293ac26d57c7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     spp.`id_spp` AS spp_id_spp,
+     spp.`nis` AS spp_nis,
+     spp.`bulan` AS spp_bulan,
+     spp.`tanggal_bayar` AS spp_tanggal_bayar,
+     spp.`jumlah` AS spp_jumlah,
+     spp.`nip_t_u` AS spp_nip_t_u
+FROM
+     spp]]>
+	</queryString>
+	<field name="spp_id_spp" class="java.lang.Integer"/>
+	<field name="spp_nis" class="java.lang.String"/>
+	<field name="spp_bulan" class="java.lang.String"/>
+	<field name="spp_tanggal_bayar" class="java.sql.Date"/>
+	<field name="spp_jumlah" class="java.lang.String"/>
+	<field name="spp_nip_t_u" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="72" uuid="32ecb15d-7670-4147-a370-c39687702d57"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="283" y="6" width="189" height="20" uuid="7ce5be6e-4538-43f2-922e-0501fd67b1cf"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Sistem Informasi Akademik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="283" y="29" width="189" height="20" uuid="9161b513-9e06-4c0f-8158-959ae638abcc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Sekolah Menengah Umum]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="52" width="100" height="20" uuid="ed04778b-afcb-4cbc-ad4e-00a9df91ff17"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Berbasis Web]]></text>
+			</staticText>
+			<image>
+				<reportElement x="724" y="3" width="93" height="66" uuid="032c6826-ab12-4add-b00b-57b8ec0ffd7b"/>
+				<imageExpression><![CDATA["D:\\Latihan Java\\TA_Haryono_11151077\\web\\Report\\tut_wuri_handayani_1.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="32" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="-1" width="802" height="31" uuid="7ab667aa-eb45-4496-b034-a800e6599544"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="6" width="100" height="20" uuid="7e9c7f2f-4150-44fe-bd92-74ba51e3416a"/>
+				<box>
+					<pen lineColor="#CC0000"/>
+					<topPen lineColor="#CC0000"/>
+					<leftPen lineColor="#CC0000"/>
+					<bottomPen lineColor="#CC0000"/>
+					<rightPen lineColor="#CC0000"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Data SPP]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="724" y="6" width="77" height="20" uuid="344b636c-1b6c-4a2b-a7a7-9bd6c383ad44"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<rectangle>
+				<reportElement x="614" y="1" width="187" height="32" uuid="45ee92e6-8b98-4185-9e8c-826d849bdf9f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="515" y="1" width="99" height="32" uuid="1ea397c0-3b7d-44a8-a5e7-917d2b810c5e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="384" y="1" width="131" height="32" uuid="7c7913e1-eff8-448a-8b85-1a6a316a247b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="289" y="1" width="95" height="32" uuid="1bcfffca-cd39-4b73-8390-68232bf6b916"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="71" y="1" width="218" height="32" uuid="e683cbc2-9275-42e2-aaa2-37fed414ec93"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="1" width="71" height="32" uuid="26fcab0b-5102-4759-8c22-5ee2cab93135"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="9" width="58" height="20" uuid="e24c741c-c86d-49ef-8cdd-9bd25f221b0f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nomor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="9" width="208" height="20" uuid="e63c8b69-b083-4f83-ab19-e637bb10c5e3"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Siswa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="9" width="82" height="20" uuid="fb63690f-7c87-4978-8d21-b598ca97cad8"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Bulan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="8" width="121" height="20" uuid="997a2ef7-1dba-4903-a9d1-f021544509a5"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Tanggal Bayar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="534" y="8" width="80" height="20" uuid="00720ac0-abc5-480e-848e-a633b5d6ec2c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Jumlah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="645" y="8" width="125" height="20" uuid="5ee58361-cb9f-4d14-971d-d016825f8a78"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Tata Usaha]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<rectangle>
+				<reportElement x="614" y="2" width="187" height="25" uuid="d1c342b0-a378-4c31-9cc8-66556021f054"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="515" y="2" width="99" height="25" uuid="25c61761-2cdb-4809-a688-5b004f2fb4da"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="384" y="2" width="131" height="25" uuid="ab7243b9-8e59-4e8b-828b-33ea7e85cdfc"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="289" y="2" width="95" height="25" uuid="492eb98c-cf3c-44bf-ad85-322a0cc01866"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="2" width="71" height="25" uuid="f9e32bec-d252-456c-a6e2-3e7cdb01b4d3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="71" y="2" width="218" height="25" uuid="fa7386cb-0883-4569-b189-7886a3546a83"/>
+			</rectangle>
+			<textField>
+				<reportElement x="13" y="5" width="58" height="20" uuid="422c19b5-5bb5-43cd-aaf3-8d729e108593"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{spp_id_spp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="5" width="208" height="20" uuid="6a45d941-3774-4fa3-93fe-ff5f25ba78bb"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{spp_nis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="4" width="82" height="20" uuid="6bd907cc-1b66-4a71-8e0e-c30f5bc48a3b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{spp_bulan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="541" y="6" width="47" height="20" uuid="e29fae1b-d959-4cee-958d-c729c2430a69"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{spp_jumlah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="627" y="8" width="174" height="20" uuid="e2cc5bf5-5118-4fdf-b76e-7f9af2c9be40"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{spp_nip_t_u}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="394" y="5" width="121" height="20" uuid="ab3a83f2-0828-4a91-bbc3-a4cf9951a2e4"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{spp_tanggal_bayar}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement x="685" y="6" width="80" height="20" uuid="a89c5a0f-204e-444e-b737-5b25599117f5"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="761" y="6" width="40" height="20" uuid="a78b2afb-26c1-4e8b-8f23-c34ff623c4d1"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="7" splitType="Stretch"/>
+	</summary>
+</jasperReport>
