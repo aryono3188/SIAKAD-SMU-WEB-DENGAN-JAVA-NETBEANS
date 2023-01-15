@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c9ab5da7-6e1d-4472-ba9b-293ac26d57c7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     mata_pelajaran.`kode_pelajaran` AS mata_pelajaran_kode_pelajaran,
+     mata_pelajaran.`nama_pelajaran` AS mata_pelajaran_nama_pelajaran
+FROM
+     `mata_pelajaran` mata_pelajaran]]>
+	</queryString>
+	<field name="mata_pelajaran_kode_pelajaran" class="java.lang.String"/>
+	<field name="mata_pelajaran_nama_pelajaran" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<rectangle>
+				<reportElement x="88" y="0" width="614" height="72" uuid="32ecb15d-7670-4147-a370-c39687702d57"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="283" y="6" width="189" height="20" uuid="7ce5be6e-4538-43f2-922e-0501fd67b1cf"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Sistem Informasi Akademik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="283" y="29" width="189" height="20" uuid="9161b513-9e06-4c0f-8158-959ae638abcc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Sekolah Menengah Umum]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="52" width="100" height="20" uuid="ed04778b-afcb-4cbc-ad4e-00a9df91ff17"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Berbasis Web]]></text>
+			</staticText>
+			<image>
+				<reportElement x="632" y="3" width="93" height="66" uuid="032c6826-ab12-4add-b00b-57b8ec0ffd7b"/>
+				<imageExpression><![CDATA["D:\\Latihan Java\\TA_Haryono_11151077\\web\\Report\\tut_wuri_handayani_1.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="33" splitType="Stretch">
+			<rectangle>
+				<reportElement x="88" y="-1" width="614" height="31" uuid="7ab667aa-eb45-4496-b034-a800e6599544"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="101" y="6" width="151" height="20" uuid="7e9c7f2f-4150-44fe-bd92-74ba51e3416a"/>
+				<box>
+					<pen lineColor="#CC0000"/>
+					<topPen lineColor="#CC0000"/>
+					<leftPen lineColor="#CC0000"/>
+					<bottomPen lineColor="#CC0000"/>
+					<rightPen lineColor="#CC0000"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Data Mata Pelajaran]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="606" y="6" width="95" height="20" uuid="344b636c-1b6c-4a2b-a7a7-9bd6c383ad44"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<rectangle>
+				<reportElement x="201" y="0" width="500" height="32" uuid="ecd2d3d4-48e5-4ed0-9aac-e70b520949c0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="88" y="0" width="113" height="32" uuid="26fcab0b-5102-4759-8c22-5ee2cab93135"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="101" y="0" width="100" height="20" uuid="1c3488ed-70c5-4c4c-82c0-f85b8c415ed8"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Kode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="2" width="483" height="20" uuid="5882196d-a35c-45a3-860b-0a725305d166"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Pelajaran]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<rectangle>
+				<reportElement x="201" y="0" width="500" height="20" uuid="ac1a35f3-9b2d-4eb0-8765-d5136440628e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="88" y="0" width="113" height="20" uuid="8853cdf4-f6f5-474b-8304-3e1056b151e3"/>
+			</rectangle>
+			<textField>
+				<reportElement x="101" y="0" width="100" height="20" uuid="da809263-6bf6-4f69-b4db-49daa8291d4e"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mata_pelajaran_kode_pelajaran}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="218" y="2" width="483" height="20" uuid="a9a5bdd6-5c9d-4d77-847a-8627f5639211"/>
+				<textFieldExpression><![CDATA[$F{mata_pelajaran_nama_pelajaran}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="606" y="0" width="54" height="20" uuid="a89c5a0f-204e-444e-b737-5b25599117f5"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="662" y="0" width="40" height="20" uuid="a78b2afb-26c1-4e8b-8f23-c34ff623c4d1"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="7" splitType="Stretch"/>
+	</summary>
+</jasperReport>

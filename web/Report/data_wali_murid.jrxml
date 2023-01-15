@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="1008" pageHeight="612" orientation="Landscape" columnWidth="968" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c9ab5da7-6e1d-4472-ba9b-293ac26d57c7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="14"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     wali_murid.`id_wali_murid` AS wali_murid_id_wali_murid,
+     wali_murid.`nama_wali_murid` AS wali_murid_nama_wali_murid,
+     wali_murid.`nis` AS wali_murid_nis,
+     wali_murid.`alamat_walmur` AS wali_murid_alamat_walmur,
+     wali_murid.`no_telepon_walmur` AS wali_murid_no_telepon_walmur,
+     wali_murid.`usname_wali_murid` AS wali_murid_usname_wali_murid,
+     wali_murid.`pass_wali_murid` AS wali_murid_pass_wali_murid
+FROM
+     `wali_murid` wali_murid]]>
+	</queryString>
+	<field name="wali_murid_id_wali_murid" class="java.lang.Integer"/>
+	<field name="wali_murid_nama_wali_murid" class="java.lang.String"/>
+	<field name="wali_murid_nis" class="java.lang.String"/>
+	<field name="wali_murid_alamat_walmur" class="java.lang.String"/>
+	<field name="wali_murid_no_telepon_walmur" class="java.lang.String"/>
+	<field name="wali_murid_usname_wali_murid" class="java.lang.String"/>
+	<field name="wali_murid_pass_wali_murid" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="968" height="72" uuid="32ecb15d-7670-4147-a370-c39687702d57"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="358" y="6" width="189" height="20" uuid="7ce5be6e-4538-43f2-922e-0501fd67b1cf"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Sistem Informasi Akademik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="358" y="29" width="189" height="20" uuid="9161b513-9e06-4c0f-8158-959ae638abcc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Sekolah Menengah Umum]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="52" width="100" height="20" uuid="ed04778b-afcb-4cbc-ad4e-00a9df91ff17"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Berbasis Web]]></text>
+			</staticText>
+			<image>
+				<reportElement x="889" y="3" width="93" height="66" uuid="032c6826-ab12-4add-b00b-57b8ec0ffd7b"/>
+				<imageExpression><![CDATA["D:\\Latihan Java\\TA_Haryono_11151077\\web\\Report\\tut_wuri_handayani_1.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="-1" width="968" height="31" uuid="7ab667aa-eb45-4496-b034-a800e6599544"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="6" width="100" height="20" uuid="7e9c7f2f-4150-44fe-bd92-74ba51e3416a"/>
+				<box>
+					<pen lineColor="#CC0000"/>
+					<topPen lineColor="#CC0000"/>
+					<leftPen lineColor="#CC0000"/>
+					<bottomPen lineColor="#CC0000"/>
+					<rightPen lineColor="#CC0000"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Data Wali Murid]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="868" y="6" width="100" height="20" uuid="344b636c-1b6c-4a2b-a7a7-9bd6c383ad44"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<rectangle>
+				<reportElement x="868" y="1" width="100" height="32" uuid="44d7b221-e651-4118-a68d-3cf301d0e0b3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="768" y="1" width="100" height="32" uuid="ae63effa-9e55-4fc0-985c-e0825c761d75"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="665" y="1" width="103" height="32" uuid="a4c7a4bf-f111-400d-8007-9cc888885ddc"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="370" y="1" width="295" height="32" uuid="7493ed2b-d457-4d2f-9133-4d03773e2a60"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="225" y="1" width="145" height="32" uuid="95ee3104-a987-4d2a-9e88-ffa8d849a2f5"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="57" y="1" width="168" height="32" uuid="49087d5d-0865-4917-b33d-30ee1aa70363"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="1" width="57" height="32" uuid="26fcab0b-5102-4759-8c22-5ee2cab93135"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="225" y="0" width="145" height="22" uuid="0062a7ea-1d54-4ede-9b60-09185be1d3ab"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[   Nama Murid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="2" width="293" height="20" uuid="f43bb21e-61c4-4bf7-bf93-914e956d3a81"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[   Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="668" y="2" width="100" height="20" uuid="9e3a3381-4463-4002-a787-26beb2eedaf9"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[   Nomor Telepon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="768" y="2" width="100" height="20" uuid="18d49653-5217-4e6c-bdc5-7fc6d0e520c9"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[   User Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="868" y="2" width="100" height="20" uuid="ad2ce515-95eb-4d52-9b57-ffd42e2c8353"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[   Password]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="2" width="44" height="20" uuid="2c1ca3aa-a813-4e94-86bd-f248730f853f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nomor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="2" width="168" height="20" uuid="efd4d94d-8487-40cd-bcf7-165b959db8f6"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[   Nama Wali Murid]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<rectangle>
+				<reportElement x="868" y="1" width="100" height="27" uuid="3f936411-80b8-4c4b-b1c2-11a13805647d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="768" y="1" width="100" height="27" uuid="3a1b92e5-df43-43b0-a724-c3d2305ddeb1"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="665" y="1" width="103" height="27" uuid="bfb56dd4-cf16-4105-adcc-e5b086b75a2a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="370" y="1" width="295" height="27" uuid="aa1f8adc-b039-4500-bf85-0eb7e826bf08"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="56" y="1" width="169" height="27" uuid="a14e882a-91df-48db-97af-25e34a1b5cb1"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="225" y="1" width="145" height="27" uuid="5c53bffb-3e24-4fd4-8f51-9eab7d96fc8d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="1" width="57" height="27" uuid="fa7386cb-0883-4569-b189-7886a3546a83"/>
+			</rectangle>
+			<textField>
+				<reportElement x="13" y="0" width="44" height="20" uuid="f501fde7-2449-4342-8609-eb456e8fcef9"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{wali_murid_id_wali_murid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="69" y="0" width="156" height="20" uuid="dae186b2-eabb-45dc-8ec0-d2852b9883ac"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{wali_murid_nama_wali_murid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="778" y="1" width="90" height="20" uuid="7331ee41-81da-4251-a692-554fd6a27b7c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{wali_murid_usname_wali_murid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="878" y="1" width="90" height="20" uuid="063e9df0-b23e-4276-98d8-1c590c110ea0"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{wali_murid_pass_wali_murid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="236" y="1" width="134" height="20" uuid="d4906cc1-72f1-41f3-8758-534cd8cb706d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{wali_murid_nis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="372" y="1" width="293" height="20" uuid="2036197a-d49d-4ad8-ad04-c167a7b649ca"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{wali_murid_alamat_walmur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="668" y="2" width="100" height="20" uuid="788b503f-08f1-489e-9c05-c91268639f8e"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{wali_murid_no_telepon_walmur}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="38" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="968" height="25" uuid="f9e32bec-d252-456c-a6e2-3e7cdb01b4d3"/>
+			</rectangle>
+			<textField>
+				<reportElement x="868" y="5" width="60" height="20" uuid="a89c5a0f-204e-444e-b737-5b25599117f5"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="929" y="5" width="40" height="20" uuid="a78b2afb-26c1-4e8b-8f23-c34ff623c4d1"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="7" splitType="Stretch"/>
+	</summary>
+</jasperReport>

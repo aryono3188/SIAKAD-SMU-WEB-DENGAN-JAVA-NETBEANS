@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c9ab5da7-6e1d-4472-ba9b-293ac26d57c7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="nama kelas" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     nilai_siswa.`id_nilai_siswa` AS nilai_siswa_id_nilai_siswa,
+     nilai_siswa.`nis` AS nilai_siswa_nis,
+     nilai_siswa.`kode_kelas` AS nilai_siswa_kode_kelas,
+     nilai_siswa.`kode_pelajaran` AS nilai_siswa_kode_pelajaran,
+     nilai_siswa.`semester` AS nilai_siswa_semester,
+     nilai_siswa.`tahun_ajaran` AS nilai_siswa_tahun_ajaran,
+     nilai_siswa.`tugas` AS nilai_siswa_tugas,
+     nilai_siswa.`uts` AS nilai_siswa_uts,
+     nilai_siswa.`uas` AS nilai_siswa_uas,
+     nilai_siswa.`nilai_raport` AS nilai_siswa_nilai_raport
+FROM
+     `nilai_siswa` nilai_siswa
+WHERE 
+     kode_kelas = $P{nama kelas}]]>
+	</queryString>
+	<field name="nilai_siswa_id_nilai_siswa" class="java.lang.Integer"/>
+	<field name="nilai_siswa_nis" class="java.lang.String"/>
+	<field name="nilai_siswa_kode_kelas" class="java.lang.String"/>
+	<field name="nilai_siswa_kode_pelajaran" class="java.lang.String"/>
+	<field name="nilai_siswa_semester" class="java.lang.String"/>
+	<field name="nilai_siswa_tahun_ajaran" class="java.lang.String"/>
+	<field name="nilai_siswa_tugas" class="java.lang.String"/>
+	<field name="nilai_siswa_uts" class="java.lang.String"/>
+	<field name="nilai_siswa_uas" class="java.lang.String"/>
+	<field name="nilai_siswa_nilai_raport" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="82" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="763" height="79" uuid="32ecb15d-7670-4147-a370-c39687702d57"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="281" y="6" width="189" height="20" uuid="7ce5be6e-4538-43f2-922e-0501fd67b1cf"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Sistem Informasi Akademik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="29" width="189" height="20" uuid="9161b513-9e06-4c0f-8158-959ae638abcc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Sekolah Menengah Umum]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="328" y="52" width="100" height="20" uuid="ed04778b-afcb-4cbc-ad4e-00a9df91ff17"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Berbasis Web]]></text>
+			</staticText>
+			<image>
+				<reportElement x="686" y="3" width="93" height="66" uuid="032c6826-ab12-4add-b00b-57b8ec0ffd7b"/>
+				<imageExpression><![CDATA["D:\\Latihan Java\\TA_Haryono_11151077\\web\\Report\\tut_wuri_handayani_1.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="32" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="-1" width="763" height="31" uuid="7ab667aa-eb45-4496-b034-a800e6599544"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="6" width="134" height="20" uuid="7e9c7f2f-4150-44fe-bd92-74ba51e3416a"/>
+				<box>
+					<pen lineColor="#CC0000"/>
+					<topPen lineColor="#CC0000"/>
+					<leftPen lineColor="#CC0000"/>
+					<bottomPen lineColor="#CC0000"/>
+					<rightPen lineColor="#CC0000"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Transkip Nilai Kelas :]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="689" y="6" width="71" height="20" uuid="344b636c-1b6c-4a2b-a7a7-9bd6c383ad44"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="147" y="8" width="100" height="20" uuid="4eb30028-71b5-4aaa-a0bc-69dd5ad16da0"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nama kelas}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<rectangle>
+				<reportElement x="701" y="1" width="62" height="38" uuid="21ad0459-329c-4b25-b043-c531468280f8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="469" y="1" width="104" height="38" uuid="aa99d8c7-e8f3-490b-9324-b18c41fd3e30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="573" y="1" width="46" height="38" uuid="45ee92e6-8b98-4185-9e8c-826d849bdf9f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="395" y="1" width="74" height="38" uuid="1ea397c0-3b7d-44a8-a5e7-917d2b810c5e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="211" y="1" width="184" height="38" uuid="1bcfffca-cd39-4b73-8390-68232bf6b916"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="41" y="1" width="170" height="38" uuid="e683cbc2-9275-42e2-aaa2-37fed414ec93"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="1" width="41" height="38" uuid="26fcab0b-5102-4759-8c22-5ee2cab93135"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="9" width="28" height="20" uuid="e24c741c-c86d-49ef-8cdd-9bd25f221b0f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="9" width="136" height="20" uuid="e63c8b69-b083-4f83-ab19-e637bb10c5e3"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Siswa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="11" width="143" height="20" uuid="997a2ef7-1dba-4903-a9d1-f021544509a5"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Mata Pelajaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="406" y="11" width="63" height="20" uuid="00720ac0-abc5-480e-848e-a633b5d6ec2c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Semester]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="496" y="1" width="41" height="20" uuid="5ee58361-cb9f-4d14-971d-d016825f8a78"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[  Tahun]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="496" y="19" width="47" height="20" uuid="f919dcb1-d4fe-4656-93c8-157b19445a6c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[  Ajaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="579" y="9" width="40" height="20" uuid="0498853d-c9ac-4f85-b38b-22de32fea591"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Tugas]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="619" y="1" width="41" height="38" uuid="59944269-9ff3-4e84-be40-48b7f1e10c41"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="623" y="9" width="33" height="20" uuid="05e490ef-fbc6-481d-a1e0-3e46dc0ca09c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[UTS]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="660" y="1" width="41" height="38" uuid="a98d7547-6625-483c-bd70-684cbd4beab7"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="668" y="9" width="33" height="20" uuid="e58cfcf5-b31c-4528-a5f8-416a70619131"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[UAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="716" y="1" width="33" height="20" uuid="52b5081e-4322-4ff8-87ac-b9bc8cffa712"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nilai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="712" y="19" width="46" height="20" uuid="d7cba45e-c60f-4045-97b5-fb7cf8e1c1b9"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Raport]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<rectangle>
+				<reportElement x="701" y="2" width="62" height="25" uuid="eb552f43-f776-4377-b0d7-416f32385861"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="660" y="2" width="41" height="25" uuid="c47b40f0-0f7b-426c-8a31-bd2157b35a7e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="619" y="2" width="41" height="25" uuid="0009e38f-853a-4721-b6c7-471a37000951"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="573" y="2" width="46" height="25" uuid="f8b4a5ff-80af-42ae-8149-d3d0e122093f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="469" y="2" width="104" height="25" uuid="d1c342b0-a378-4c31-9cc8-66556021f054"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="395" y="2" width="74" height="25" uuid="25c61761-2cdb-4809-a688-5b004f2fb4da"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="211" y="2" width="184" height="25" uuid="492eb98c-cf3c-44bf-ad85-322a0cc01866"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="2" width="41" height="25" uuid="f9e32bec-d252-456c-a6e2-3e7cdb01b4d3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="41" y="2" width="170" height="25" uuid="fa7386cb-0883-4569-b189-7886a3546a83"/>
+			</rectangle>
+			<textField>
+				<reportElement x="13" y="6" width="28" height="20" uuid="a182873b-2641-4435-bfcd-6f163e3491f2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nilai_siswa_id_nilai_siswa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="49" y="6" width="162" height="20" uuid="489b10a0-81e7-44aa-b96c-a57f4b0f2515"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nilai_siswa_nis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="224" y="6" width="171" height="20" uuid="dfa5793f-b9e9-4244-b716-6258369ea9f0"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nilai_siswa_kode_pelajaran}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="406" y="6" width="63" height="20" uuid="1fe5ec94-a33d-4953-8cf7-538568172d93"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nilai_siswa_semester}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="6" width="93" height="20" uuid="03123053-ec86-4c70-ac3a-08928e8565d2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nilai_siswa_tahun_ajaran}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="579" y="6" width="40" height="20" uuid="f1abe0aa-7037-4101-9e6e-8462c658ced4"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nilai_siswa_tugas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="623" y="6" width="37" height="20" uuid="305bf9e4-a6ad-4eff-98f1-81dccdcc9c1a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nilai_siswa_uts}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="668" y="7" width="28" height="20" uuid="006ce24b-4253-4a82-86a6-6ccc47ec3773"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nilai_siswa_uas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="716" y="6" width="37" height="20" uuid="54b1c69f-c691-4c74-80c7-7b302a17029e"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nilai_siswa_nilai_raport}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="637" y="2" width="80" height="20" uuid="a89c5a0f-204e-444e-b737-5b25599117f5"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="716" y="3" width="40" height="20" uuid="a78b2afb-26c1-4e8b-8f23-c34ff623c4d1"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="7" splitType="Stretch"/>
+	</summary>
+</jasperReport>

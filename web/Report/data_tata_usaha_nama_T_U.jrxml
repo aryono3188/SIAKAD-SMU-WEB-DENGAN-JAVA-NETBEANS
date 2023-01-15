@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c9ab5da7-6e1d-4472-ba9b-293ac26d57c7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="nama T U" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     tata_usaha.`nip_t_u` AS tata_usaha_nip_t_u,
+     tata_usaha.`nama_t_u` AS tata_usaha_nama_t_u,
+     tata_usaha.`alamat_t_u` AS tata_usaha_alamat_t_u,
+     tata_usaha.`usname_t_u` AS tata_usaha_usname_t_u,
+     tata_usaha.`pass_t_u` AS tata_usaha_pass_t_u
+FROM
+     `tata_usaha` tata_usaha
+WHERE
+     nama_t_u = $P{nama T U}]]>
+	</queryString>
+	<field name="tata_usaha_nip_t_u" class="java.lang.String"/>
+	<field name="tata_usaha_nama_t_u" class="java.lang.String"/>
+	<field name="tata_usaha_alamat_t_u" class="java.lang.String"/>
+	<field name="tata_usaha_usname_t_u" class="java.lang.String"/>
+	<field name="tata_usaha_pass_t_u" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="72" uuid="32ecb15d-7670-4147-a370-c39687702d57"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="283" y="6" width="189" height="20" uuid="7ce5be6e-4538-43f2-922e-0501fd67b1cf"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Sistem Informasi Akademik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="283" y="29" width="189" height="20" uuid="9161b513-9e06-4c0f-8158-959ae638abcc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Sekolah Menengah Umum]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="52" width="100" height="20" uuid="ed04778b-afcb-4cbc-ad4e-00a9df91ff17"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Berbasis Web]]></text>
+			</staticText>
+			<image>
+				<reportElement x="724" y="3" width="93" height="66" uuid="032c6826-ab12-4add-b00b-57b8ec0ffd7b"/>
+				<imageExpression><![CDATA["D:\\Latihan Java\\TA_Haryono_11151077\\web\\Report\\tut_wuri_handayani_1.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="-1" width="802" height="31" uuid="7ab667aa-eb45-4496-b034-a800e6599544"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="6" width="131" height="20" uuid="7e9c7f2f-4150-44fe-bd92-74ba51e3416a"/>
+				<box>
+					<pen lineColor="#CC0000"/>
+					<topPen lineColor="#CC0000"/>
+					<leftPen lineColor="#CC0000"/>
+					<bottomPen lineColor="#CC0000"/>
+					<rightPen lineColor="#CC0000"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Data Tata Usaha]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="685" y="6" width="116" height="20" uuid="344b636c-1b6c-4a2b-a7a7-9bd6c383ad44"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="802" height="32" uuid="26fcab0b-5102-4759-8c22-5ee2cab93135"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="0" width="100" height="20" uuid="f45cb1a6-0e75-496f-9246-eb8d83e53815"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[NIP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="144" y="1" width="121" height="20" uuid="da056705-a493-426b-9769-2ab46be38a64"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Tata Usaha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="298" y="0" width="268" height="20" uuid="ade4ceb3-68ce-4e4e-b3d6-b26db942c484"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="570" y="0" width="100" height="20" uuid="7078c4c1-164f-4523-975a-b5bafd056961"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[User Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="685" y="1" width="116" height="20" uuid="0876abbf-531c-4348-b081-09e7acb77964"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Password]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="802" height="32" uuid="fa7386cb-0883-4569-b189-7886a3546a83"/>
+			</rectangle>
+			<textField>
+				<reportElement x="13" y="1" width="100" height="20" uuid="d81af8cc-8543-4138-9d0d-1d4eaac911c5"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tata_usaha_nip_t_u}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="1" width="121" height="20" uuid="a51d23bd-f9ff-440e-b0ed-36c2d82fb752"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tata_usaha_nama_t_u}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="570" y="0" width="100" height="20" uuid="9aa12b86-b64e-4f57-b70b-4351c52b500a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tata_usaha_usname_t_u}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="685" y="1" width="116" height="20" uuid="75e0e9e5-4ca9-4345-97ec-2222fc060267"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tata_usaha_pass_t_u}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="298" y="1" width="268" height="20" uuid="b7487ad9-eca5-4d72-81ae-51f1097bee6d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tata_usaha_alamat_t_u}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="38" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="802" height="25" uuid="f9e32bec-d252-456c-a6e2-3e7cdb01b4d3"/>
+			</rectangle>
+			<textField>
+				<reportElement x="665" y="5" width="80" height="20" uuid="a89c5a0f-204e-444e-b737-5b25599117f5"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="745" y="5" width="40" height="20" uuid="a78b2afb-26c1-4e8b-8f23-c34ff623c4d1"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="7" splitType="Stretch"/>
+	</summary>
+</jasperReport>
